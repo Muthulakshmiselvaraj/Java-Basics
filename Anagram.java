@@ -19,4 +19,33 @@ class Anagram{
 		 }
 	}
 }
+
+class Anagram{
+	public static void main(String[] args){
+		String a = "Anagram";
+		String b = "Nagaram";
+		if(a.length() != b.length()){
+			System.out.println("Not an Anagram");
+		}
+		else{
+			String A = a.toUpperCase();
+			String B = b.toUpperCase();
+			String C = B;
+			for(int i = 0;i<A.length();i++){
+				for(int j =0;j<B.length();j++){
+					if(A.charAt(i) == B.charAt(j)){
+						C = C.replaceFirst(""+A.charAt(i),"");        //C = C.replaceFirst(Character.toString(A.charAt(i)),"");
+					}
+				}
+			}
+			if(C.length() == 0){
+				System.out.println("Is An Anagram");
+			}
+			else{
+				System.out.println("Not An Anagram");
+			}
+		}
+	}
+}
+				                                                           
 		
